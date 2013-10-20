@@ -43,28 +43,6 @@ How do you do it?
 1. Go to the Downloads tab.
 1. Install the Command Line Tools.
 
-### Bootstrapping
-
-Create a **new** git repository somewhere.
-It can be private or public -- it really doesn't matter.
-If you're making a repository on GitHub, you _may not_ want to fork this repo
-to get started.
-The reason for that is that you can't really make private forks of public
-repositories easily.
-
-Once you've done that, you can run the following to bootstrap
-your boxen:
-
-```
-sudo mkdir -p /opt/boxen
-sudo chown ${USER}:staff /opt/boxen
-git clone https://github.com/boxen/our-boxen /opt/boxen/repo
-cd /opt/boxen/repo
-git remote rm origin
-git remote add origin <the location of my new git repository>
-git push -u origin master
-```
-
 ### Distributing
 
 That's enough to get your boxen into a usable state on other machines,
@@ -78,7 +56,7 @@ If you _don't_ want to use boxen-web, folks can get using your boxen like so:
 ```
 sudo mkdir -p /opt/boxen
 sudo chown ${USER}:staff /opt/boxen
-git clone <location of my new git repository> /opt/boxen/repo
+git clone https://github.com/jhonathas/boxen /opt/boxen/repo
 cd /opt/boxen/repo
 script/boxen
 ```
